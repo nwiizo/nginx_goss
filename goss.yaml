@@ -1,0 +1,27 @@
+package:
+  nginx:
+    installed: true
+    versions:
+    - 1.12.2
+port:
+  tcp:80:
+    listening: true
+    ip:
+    - 0.0.0.0
+service:
+  nginx:
+    enabled: true
+    running: true
+user:
+  nginx:
+    exists: true
+    groups:
+    - nginx
+    home: /var/lib/nginx
+    shell: /sbin/nologin
+group:
+  nginx:
+    exists: true
+process:
+  nginx:
+    running: true
